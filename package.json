@@ -1,0 +1,29 @@
+{
+  "name": "Brenton Hershner",
+  "private": true,
+  "description": "Personal Website for Brenton Hershner",
+  "version": "0.1.0",
+  "license": "0BSD",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.4",
+    "@material-ui/icons": "^4.11.2",
+    "gatsby": "^3.6.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brentonhershner/brentonhershner"
+  },
+  "bugs": {
+    "url": "https://github.com/brentonhershner/brentonhershner/issues"
+  }
+}
