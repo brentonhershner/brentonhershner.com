@@ -20,9 +20,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 export default function Home() {
 
   const darkMediaQuery = useMediaQuery('(prefers-color-scheme: dark)');
-  const darkModeContext = localStorage.getItem('darkMode') ?? darkMediaQuery;
+  // const darkModeContext = localStorage.getItem('darkMode') ?? darkMediaQuery;
 
-  const [darkMode, setDarkMode] = React.useState(darkModeContext);
+  const [darkMode, setDarkMode] = React.useState(darkMediaQuery);
 
   const [mounted, setMounted] = React.useState(false);
 
@@ -55,7 +55,7 @@ export default function Home() {
   const toggleDarkMode = () => {
     const currentDarkMode = darkMode;
     setDarkMode(!currentDarkMode);
-    localStorage.setItem('darkMode', currentDarkMode);
+    // localStorage.setItem('darkMode', currentDarkMode);
   }
 
 
