@@ -3,13 +3,11 @@ import {
   Box,
   Container,
   CssBaseline,
-  Grid,
   ThemeProvider,
   Typography,
   IconButton,
   useMediaQuery,
   Slide,
-  Paper
 } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
@@ -17,7 +15,6 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
-import EmailIcon from '@material-ui/icons/Email';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
 export default function Home() {
@@ -120,7 +117,12 @@ export default function Home() {
                 timeout={100}
               >
                 <Box>
-                  <IconButton >
+                  <IconButton
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.linkedin.com/in/brenton-hershner/"
+                    aria-label="Link to LinkedIn of Brenton Hershner"
+                  >
                     <LinkedInIcon />
                   </IconButton>
                 </Box>
@@ -130,27 +132,42 @@ export default function Home() {
                 timeout={400}
               >
                 <Box>
-                  <IconButton >
+                  <IconButton
+                    target="_blank"
+                    rel="noopener"
+                    href="https://github.com/brentonhershner"
+                    aria-label="Link to GitHub of Brenton Hershner"
+                  >
                     <GitHubIcon />
                   </IconButton>
                 </Box>
               </Slide>
 
               <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
-                timeout={700}
+                timeout={800}
               >
                 <Box>
-                  <IconButton >
+                  <IconButton
+                    target="_blank"
+                    rel="noopener"
+                    href="https://twitter.com/BrentHershner"
+                    aria-label="Link to twitter of Brenton Hershner"
+                  >
                     <TwitterIcon />
                   </IconButton>
                 </Box>
               </Slide>
 
               <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
-                timeout={1000}
+                timeout={1300}
               >
                 <Box>
-                  <IconButton >
+                  <IconButton
+                    target="_blank"
+                    rel="noopener"
+                    href="https://www.instagram.com/brenthersh/"
+                    aria-label="Link to instagram of Brenton Hershner"
+                  >
                     <InstagramIcon />
                   </IconButton>
                 </Box>
