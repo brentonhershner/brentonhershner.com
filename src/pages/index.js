@@ -7,7 +7,9 @@ import {
   ThemeProvider,
   Typography,
   IconButton,
-  useMediaQuery
+  useMediaQuery,
+  Slide,
+  Paper
 } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
@@ -24,6 +26,14 @@ export default function Home() {
   const darkModeContext = localStorage.getItem('darkMode') ?? darkMediaQuery;
 
   const [darkMode, setDarkMode] = React.useState(darkModeContext);
+
+  const [mounted, setMounted] = React.useState(false);
+
+  React.useEffect(() => {
+    setTimeout(() => {
+      setMounted(true);
+    })
+  }, [])
 
   const theme = React.useMemo(
     () =>
@@ -51,6 +61,7 @@ export default function Home() {
     localStorage.setItem('darkMode', currentDarkMode);
   }
 
+
   return (
 
     <React.Fragment>
@@ -60,7 +71,7 @@ export default function Home() {
           disableGutters
           className='App'
           position='absolute'
-          style={{margin:'0'}}
+          style={{ margin: '0' }}
         >
           <Box
             style={{
@@ -102,26 +113,49 @@ export default function Home() {
               justifyContent='space-around'
               alignItems='center'
             >
-              <IconButton >
+              {/* <IconButton >
                 <EmailIcon />
-              </IconButton>
-              
-              <IconButton >
-                <LinkedInIcon />
-              </IconButton>
+              </IconButton> */}
+              <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
+                timeout={100}
+              >
+                <Box>
+                  <IconButton >
+                    <LinkedInIcon />
+                  </IconButton>
+                </Box>
+              </Slide>
 
-              <IconButton >
-                <GitHubIcon />
-              </IconButton>
+              <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
+                timeout={400}
+              >
+                <Box>
+                  <IconButton >
+                    <GitHubIcon />
+                  </IconButton>
+                </Box>
+              </Slide>
 
-              <IconButton >
-                <TwitterIcon />
-              </IconButton>
-              
-              <IconButton >
-                <InstagramIcon />
-              </IconButton>
-              
+              <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
+                timeout={700}
+              >
+                <Box>
+                  <IconButton >
+                    <TwitterIcon />
+                  </IconButton>
+                </Box>
+              </Slide>
+
+              <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
+                timeout={1000}
+              >
+                <Box>
+                  <IconButton >
+                    <InstagramIcon />
+                  </IconButton>
+                </Box>
+              </Slide>
+
 
             </Box>
 
@@ -130,7 +164,7 @@ export default function Home() {
           </Box>
         </Container>
       </ThemeProvider>
-    </React.Fragment>
+    </React.Fragment >
   )
 }
 
