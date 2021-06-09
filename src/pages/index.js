@@ -29,7 +29,7 @@ export default function Home() {
   React.useEffect(() => {
     setTimeout(() => {
       setMounted(true);
-    })
+    }, 100)
   }, [])
 
   const theme = React.useMemo(
