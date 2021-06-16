@@ -61,7 +61,8 @@ export default function Home() {
 
   return (
 
-    <React.Fragment>
+    <main>
+      <title>Brenton Hershner</title>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container
@@ -113,9 +114,9 @@ export default function Home() {
               {/* <IconButton >
                 <EmailIcon />
               </IconButton> */}
-              <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
+              {/* <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
                 timeout={100}
-              >
+              > */}
                 <Box>
                   <IconButton
                     target="_blank"
@@ -126,11 +127,11 @@ export default function Home() {
                     <LinkedInIcon />
                   </IconButton>
                 </Box>
-              </Slide>
+              {/* </Slide> */}
 
-              <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
+              {/* <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
                 timeout={400}
-              >
+              > */}
                 <Box>
                   <IconButton
                     target="_blank"
@@ -141,11 +142,11 @@ export default function Home() {
                     <GitHubIcon />
                   </IconButton>
                 </Box>
-              </Slide>
+              {/* </Slide> */}
 
-              <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
+              {/* <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
                 timeout={800}
-              >
+              > */}
                 <Box>
                   <IconButton
                     target="_blank"
@@ -156,11 +157,11 @@ export default function Home() {
                     <TwitterIcon />
                   </IconButton>
                 </Box>
-              </Slide>
+              {/* </Slide> */}
 
-              <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
+              {/* <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
                 timeout={1300}
-              >
+              > */}
                 <Box>
                   <IconButton
                     target="_blank"
@@ -171,7 +172,7 @@ export default function Home() {
                     <InstagramIcon />
                   </IconButton>
                 </Box>
-              </Slide>
+              {/* </Slide> */}
 
 
             </Box>
@@ -181,8 +182,6 @@ export default function Home() {
           </Box>
         </Container>
       </ThemeProvider>
-    </React.Fragment >
+    </main >
   )
 }
-
-//239,240,244
