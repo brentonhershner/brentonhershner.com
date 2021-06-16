@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import {
   Box,
   Container,
@@ -7,7 +8,6 @@ import {
   Typography,
   IconButton,
   useMediaQuery,
-  Slide,
 } from '@material-ui/core';
 import { createMuiTheme } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
@@ -23,14 +23,6 @@ export default function Home() {
   // const darkModeContext = localStorage.getItem('darkMode') ?? darkMediaQuery;
 
   const [darkMode, setDarkMode] = React.useState(darkMediaQuery);
-
-  const [mounted, setMounted] = React.useState(false);
-
-  React.useEffect(() => {
-    setTimeout(() => {
-      setMounted(true);
-    }, 100)
-  }, [])
 
   const theme = React.useMemo(
     () =>
@@ -58,11 +50,19 @@ export default function Home() {
     // localStorage.setItem('darkMode', currentDarkMode);
   }
 
-
   return (
 
-    <main>
-      <title>Brenton Hershner</title>
+    <div className='application'>
+      <Helmet>
+        <meta charSet='utf-8' />
+        <meta name='description' content="Hire me!!! I'm a Software Engineer with a background in Mechanical Enginering and Product Management." />
+        <meta name='keywords' content='Software, Engineer, Developer, JavaScript, Full-stack, React' />
+        <meta name='author' content='Brenton Hershner' />
+        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name='revised' content='BrentonHershner, 6/16/2021' />
+        <title>Brenton Hershner</title>
+      </Helmet>
+
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container
@@ -103,6 +103,12 @@ export default function Home() {
             >
               Brenton Hershner
             </Typography>
+            <Typography
+              variant='subtitle1'
+              align='center'
+            >
+              Hire me!!! Software Engineer | ex-Mechanical Engineer.
+            </Typography>
             <Box
               width='50%'
               display='flex'
@@ -114,65 +120,50 @@ export default function Home() {
               {/* <IconButton >
                 <EmailIcon />
               </IconButton> */}
-              {/* <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
-                timeout={100}
-              > */}
-                <Box>
-                  <IconButton
-                    target="_blank"
-                    rel="noopener"
-                    href="https://www.linkedin.com/in/brenton-hershner/"
-                    aria-label="Link to LinkedIn of Brenton Hershner"
-                  >
-                    <LinkedInIcon />
-                  </IconButton>
-                </Box>
-              {/* </Slide> */}
 
-              {/* <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
-                timeout={400}
-              > */}
-                <Box>
-                  <IconButton
-                    target="_blank"
-                    rel="noopener"
-                    href="https://github.com/brentonhershner"
-                    aria-label="Link to GitHub of Brenton Hershner"
-                  >
-                    <GitHubIcon />
-                  </IconButton>
-                </Box>
-              {/* </Slide> */}
+              <Box>
+                <IconButton
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.linkedin.com/in/brenton-hershner/"
+                  aria-label="Link to LinkedIn of Brenton Hershner"
+                >
+                  <LinkedInIcon />
+                </IconButton>
+              </Box>
 
-              {/* <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
-                timeout={800}
-              > */}
-                <Box>
-                  <IconButton
-                    target="_blank"
-                    rel="noopener"
-                    href="https://twitter.com/BrentHershner"
-                    aria-label="Link to twitter of Brenton Hershner"
-                  >
-                    <TwitterIcon />
-                  </IconButton>
-                </Box>
-              {/* </Slide> */}
+              <Box>
+                <IconButton
+                  target="_blank"
+                  rel="noopener"
+                  href="https://github.com/brentonhershner"
+                  aria-label="Link to GitHub of Brenton Hershner"
+                >
+                  <GitHubIcon />
+                </IconButton>
+              </Box>
 
-              {/* <Slide direction="up" in={mounted} mountOnEnter unmountOnExit
-                timeout={1300}
-              > */}
-                <Box>
-                  <IconButton
-                    target="_blank"
-                    rel="noopener"
-                    href="https://www.instagram.com/brenthersh/"
-                    aria-label="Link to instagram of Brenton Hershner"
-                  >
-                    <InstagramIcon />
-                  </IconButton>
-                </Box>
-              {/* </Slide> */}
+              <Box>
+                <IconButton
+                  target="_blank"
+                  rel="noopener"
+                  href="https://twitter.com/BrentHershner"
+                  aria-label="Link to twitter of Brenton Hershner"
+                >
+                  <TwitterIcon />
+                </IconButton>
+              </Box>
+
+              <Box>
+                <IconButton
+                  target="_blank"
+                  rel="noopener"
+                  href="https://www.instagram.com/brenthersh/"
+                  aria-label="Link to instagram of Brenton Hershner"
+                >
+                  <InstagramIcon />
+                </IconButton>
+              </Box>
 
 
             </Box>
@@ -182,6 +173,6 @@ export default function Home() {
           </Box>
         </Container>
       </ThemeProvider>
-    </main >
+    </div >
   )
 }
