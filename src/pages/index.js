@@ -5,14 +5,16 @@ import {
   Container,
   CssBaseline,
   ThemeProvider,
-  Typography,
   IconButton,
   useMediaQuery,
 } from '@material-ui/core';
+import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
 import { createMuiTheme } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
+import selfie from '../images/BrentonPier66.jpg';
 
 export default function Home() {
 
@@ -85,6 +87,12 @@ export default function Home() {
             </IconButton>
           </Box>
           <Title />
+          <Card>
+            <CardMedia
+              image={selfie}
+              title="Brenton Selfie"
+            />
+          </Card>
         </Container>
       </ThemeProvider>
     </div >
