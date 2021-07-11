@@ -25,8 +25,9 @@ const stringToBool = (str) => {
 const isBrowser = typeof window !== "undefined"
 
 export default function Home() {
-  const darkModeQuery = isBrowser ? window.matchMedia('(prefers-color-scheme: dark)').matches : null;
-  let darkModeStored = localStorage.getItem('darkMode');
+  const darkModeQuery = isBrowser ? 
+    window.matchMedia('(prefers-color-scheme: dark)').matches : null;
+  let darkModeStored = isBrowser ? localStorage.getItem('darkMode') : null;
   const darkModeContext = stringToBool(darkModeStored) ?? darkModeQuery;
 
   const [darkMode, setDarkMode] = useState(darkModeContext);
