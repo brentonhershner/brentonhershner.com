@@ -10,7 +10,7 @@ import {
 } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-import { createTheme } from '@material-ui/core/styles';
+import { createMuiTheme } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
@@ -33,7 +33,7 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(darkModeContext);
 
   let darkTheme = darkMode ?? darkModeContext;
-  let theme = createTheme({ palette: { type: darkTheme ? 'dark' : 'light' }, })
+  let theme = createMuiTheme({ palette: { type: darkTheme ? 'dark' : 'light' }, })
   theme = responsiveFontSizes(theme);
 
   const toggleDarkMode = () => {
