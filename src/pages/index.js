@@ -5,11 +5,11 @@ import {
   Container,
   CssBaseline,
   IconButton,
-  responsiveFontSizes,
+  // responsiveFontSizes,
 } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider, responsiveFontSizes } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
@@ -24,17 +24,24 @@ const stringToBool = (str) => {
 
 const isBrowser = typeof window !== "undefined"
 
+
 export default function Home() {
-  const darkModeQuery = isBrowser ? 
-    window.matchMedia('(prefers-color-scheme: dark)').matches : null;
+  const darkModeQuery = isBrowser ?
+  window.matchMedia('(prefers-color-scheme: dark)').matches : null;
   let darkModeStored = isBrowser ? localStorage.getItem('darkMode') : null;
   const darkModeContext = stringToBool(darkModeStored) ?? darkModeQuery;
-
+  
+  const darkTheme = responsiveFontSizes(createTheme({
+    palette: { type: 'dark' }
+  }));
+  const lightTheme = responsiveFontSizes(createTheme({
+    palette: { type: 'light' }
+  }));
+  
   const [darkMode, setDarkMode] = useState(darkModeContext);
 
-  let darkTheme = darkMode ?? darkModeContext;
-  let theme = createTheme({ palette: { type: darkTheme ? 'dark' : 'light' }, })
-  theme = responsiveFontSizes(theme);
+  let isDarkTheme = darkMode ?? darkModeContext;
+  // let theme = createTheme({ palette: { type: darkTheme ? 'dark' : 'light' }, })
 
   const toggleDarkMode = () => {
     const newDarkMode = !darkMode;
@@ -54,8 +61,8 @@ export default function Home() {
         <title>Brenton Hershner</title>
       </Helmet>
 
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
+      {/* <CssBaseline /> */}
+      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <Container
           disableGutters
           className='LandingPage'
