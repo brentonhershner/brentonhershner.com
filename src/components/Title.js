@@ -1,8 +1,9 @@
 import React from 'react';
 import {
   Box,
-  Typography,
   IconButton,
+  Tooltip,
+  Typography,
 } from '@material-ui/core';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
@@ -11,7 +12,7 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 import pdf from '../../static/BrentonHershnerResume.pdf';
 
-export default function Links() {
+export default function Title() {
   return (
     <Box
       position='relative'
@@ -31,9 +32,7 @@ export default function Links() {
       <Typography
         variant='subtitle1'
         align='center'
-      >
-        Hire me!!! Software Engineer | ex-Mechanical Engineer.
-      </Typography>
+      >Software Engineer | BS in Mechancial Engineering | MBA</Typography>
       <Box
         width='50%'
         display='flex'
@@ -46,7 +45,7 @@ export default function Links() {
                 <EmailIcon />
               </IconButton> */}
 
-        <Box>
+        <Tooltip title="Resume">
           <IconButton
             target="_blank"
             rel="noopener"
@@ -55,9 +54,9 @@ export default function Links() {
           >
             <InsertDriveFileIcon />
           </IconButton>
-        </Box>
+        </Tooltip>
 
-        <Box>
+        <Tooltip title="LinkedIn">
           <IconButton
             target="_blank"
             rel="noopener"
@@ -66,9 +65,9 @@ export default function Links() {
           >
             <LinkedInIcon />
           </IconButton>
-        </Box>
+        </Tooltip>
 
-        <Box>
+        <Tooltip title="GitHub">
           <IconButton
             target="_blank"
             rel="noopener"
@@ -77,9 +76,9 @@ export default function Links() {
           >
             <GitHubIcon />
           </IconButton>
-        </Box>
+        </Tooltip>
 
-        <Box>
+        <Tooltip title="Twitter">
           <IconButton
             target="_blank"
             rel="noopener"
@@ -88,9 +87,9 @@ export default function Links() {
           >
             <TwitterIcon />
           </IconButton>
-        </Box>
+        </Tooltip>
 
-        <Box>
+        <Tooltip title="Instagram">
           <IconButton
             target="_blank"
             rel="noopener"
@@ -99,7 +98,7 @@ export default function Links() {
           >
             <InstagramIcon />
           </IconButton>
-        </Box>
+        </Tooltip>
 
       </Box>
     </Box>

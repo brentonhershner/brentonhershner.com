@@ -12,7 +12,7 @@ import {
 import { createMuiTheme } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
-import Links from '../components/links';
+import Title from '../components/Title';
 
 export default function Home() {
 
@@ -84,7 +84,7 @@ export default function Home() {
               {darkMode ? <Brightness7Icon /> : <Brightness3Icon />}
             </IconButton>
           </Box>
-          <Links />
+          <Title />
         </Container>
       </ThemeProvider>
     </div >
