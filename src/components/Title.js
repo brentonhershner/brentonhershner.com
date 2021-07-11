@@ -1,21 +1,18 @@
 import React from 'react';
 import {
   Box,
+  createTheme,
   IconButton,
   Tooltip,
   Typography,
 } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardMedia from '@material-ui/core/CardMedia';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 import pdf from '../../static/BrentonHershnerResume.pdf';
-import selfie from '/src/images/BrentonPier66.jpg';
 import ProfilePhoto from './ProfilePhoto';
 
 const useStyles = makeStyles({
@@ -42,7 +39,7 @@ export default function Title() {
       >
         <Typography
           variant='h1'
-          component='h2'
+          component='h1'
           align='center'
         >
           Brenton Hershner

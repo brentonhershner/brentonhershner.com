@@ -1,7 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles({
@@ -19,13 +18,13 @@ export default function ProfilePhoto() {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="../BrentonPier66.jpg"
-          title="Brenton Hershner Profile Image"
-        />
-      </CardActionArea>
+      <CardMedia
+        className={classes.media}
+        component="img"
+        image="../BrentonPier66smaller.jpg"
+        title="Brenton Hershner Profile Photo"
+        alt="Brenton Hershner Profile Photo"
+      />
     </Card>
   );
 }
