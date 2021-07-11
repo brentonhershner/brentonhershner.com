@@ -1,9 +1,9 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/styles';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     width: 200,
     borderRadius: '50%',
@@ -11,13 +11,16 @@ const useStyles = makeStyles({
   media: {
     height: 200,
   },
-});
+}));
 
 export default function ProfilePhoto() {
   const classes = useStyles();
 
   return (
-    <Card className={classes.root}>
+    <Card
+      className={classes.root}
+      style={{ borderRadius: '50%' }}
+    >
       <CardMedia
         className={classes.media}
         component="img"

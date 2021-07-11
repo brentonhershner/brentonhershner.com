@@ -5,7 +5,7 @@ import {
   Tooltip,
   Typography,
 } from '@material-ui/core';
-// import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/styles';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -13,6 +13,11 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 import pdf from '../../static/BrentonHershnerResume.pdf';
 import ProfilePhoto from './ProfilePhoto';
+import Resume from './Resume';
+import LinkedIn from './LinkedIn';
+import Github from './Github';
+import Twitter from './Twitter';
+import Instagram from './Instagram';
 
 // const useStyles = makeStyles({
 //   root: {
@@ -58,58 +63,14 @@ export default function Title() {
           {/* <IconButton >
                   <EmailIcon />
                 </IconButton> */}
-          <Tooltip title="Resume">
-            <IconButton
-              target="_blank"
-              rel="noopener"
-              href={pdf}
-              aria-label="Resume of Brenton Hershner"
-            >
-              <InsertDriveFileIcon />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="LinkedIn">
-            <IconButton
-              target="_blank"
-              rel="noopener"
-              href="https://www.linkedin.com/in/brenton-hershner/"
-              aria-label="Link to LinkedIn of Brenton Hershner"
-            >
-              <LinkedInIcon />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="GitHub">
-            <IconButton
-              target="_blank"
-              rel="noopener"
-              href="https://github.com/brentonhershner"
-              aria-label="Link to GitHub of Brenton Hershner"
-            >
-              <GitHubIcon />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Twitter">
-            <IconButton
-              target="_blank"
-              rel="noopener"
-              href="https://twitter.com/BrentHershner"
-              aria-label="Link to twitter of Brenton Hershner"
-            >
-              <TwitterIcon />
-            </IconButton>
-          </Tooltip>
-          <Tooltip title="Instagram">
-            <IconButton
-              target="_blank"
-              rel="noopener"
-              href="https://www.instagram.com/brenthersh/"
-              aria-label="Link to instagram of Brenton Hershner"
-            >
-              <InstagramIcon />
-            </IconButton>
-          </Tooltip>
+          <Resume />
+          <LinkedIn />
+          <Github />
+          <Twitter />
+          <Instagram />
+
         </Box>
-      <ProfilePhoto />
+        <ProfilePhoto />
       </Box>
     </Box>
   )
