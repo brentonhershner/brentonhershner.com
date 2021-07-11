@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
 import {
   Box,
@@ -6,47 +6,37 @@ import {
   CssBaseline,
   ThemeProvider,
   IconButton,
-  useMediaQuery,
+  responsiveFontSizes,
 } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
 import selfie from '../images/BrentonPier66.jpg';
 
+const stringToBool = (str) => {
+  if (str === true || str === 'true') { return true; }
+  if (str === false || str === 'false') { return false; }
+  return null;
+}
+
 export default function Home() {
+  const darkModeQuery = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  let darkModeStored = localStorage.getItem('darkMode');
+  const darkModeContext = stringToBool(darkModeStored) ?? darkModeQuery;
 
-  const darkMediaQuery = useMediaQuery('(prefers-color-scheme: dark)');
-  // const darkModeContext = localStorage.getItem('darkMode') ?? darkMediaQuery;
+  const [darkMode, setDarkMode] = useState(darkModeContext);
 
-  const [darkMode, setDarkMode] = React.useState(darkMediaQuery);
-
-  const theme = React.useMemo(
-    () =>
-      createMuiTheme({
-        palette: {
-          type: darkMode ? 'dark' : 'light',
-        },
-      }),
-    [darkMode],
-  );
-
-  theme.typography.h1 = {
-    fontSize: '3rem',
-    '@media (min-width:600px)': {
-      fontSize: '4rem',
-    },
-    [theme.breakpoints.up('md')]: {
-      fontSize: '6rem',
-    },
-  };
+  let darkTheme = darkMode ?? darkModeContext;
+  let theme = createTheme({ palette: { type: darkTheme ? 'dark' : 'light' }, })
+  theme = responsiveFontSizes(theme);
 
   const toggleDarkMode = () => {
-    const currentDarkMode = darkMode;
-    setDarkMode(!currentDarkMode);
-    // localStorage.setItem('darkMode', currentDarkMode);
+    const newDarkMode = !darkMode;
+    localStorage.setItem('darkMode', newDarkMode);
+    setDarkMode(newDarkMode);
   }
 
   return (
@@ -54,11 +44,11 @@ export default function Home() {
     <div className='application'>
       <Helmet>
         <meta charSet='utf-8' />
-        <meta name='description' content="Hire me!!! I'm a Software Engineer with a background in Mechanical Enginering and Product Management." />
-        <meta name='keywords' content='Software, Engineer, Developer, JavaScript, Full-stack, React' />
+        <meta name='description' content="Portfolio page for Brenton Hershner. A Software Engineer with a BS in Mechanical Enginering and MBA." />
+        <meta name='keywords' content='Software, Engineer, Developer, JavaScript, Full-stack' />
         <meta name='author' content='Brenton Hershner' />
         <meta name='viewport' content='width=device-width, initial-scale=1.0' />
-        <meta name='revised' content='BrentonHershner, 6/16/2021' />
+        <meta name='revised' content='BrentonHershner, 7/11/2021' />
         <title>Brenton Hershner</title>
       </Helmet>
 
@@ -79,6 +69,7 @@ export default function Home() {
             m={1}
           >
             <IconButton
+              aria-label='dark mode toggle'
               size='small'
               position='relative'
               onClick={() => { toggleDarkMode(!darkMode) }}

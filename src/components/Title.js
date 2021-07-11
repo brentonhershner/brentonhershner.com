@@ -1,12 +1,11 @@
 import React from 'react';
 import {
   Box,
-  createTheme,
   IconButton,
   Tooltip,
   Typography,
 } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+// import { makeStyles } from '@material-ui/core/styles';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import InstagramIcon from '@material-ui/icons/Instagram';
@@ -15,17 +14,17 @@ import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
 import pdf from '../../static/BrentonHershnerResume.pdf';
 import ProfilePhoto from './ProfilePhoto';
 
-const useStyles = makeStyles({
-  root: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-});
+// const useStyles = makeStyles({
+//   root: {
+//     maxWidth: 345,
+//   },
+//   media: {
+//     height: 140,
+//   },
+// });
 
 export default function Title() {
-  const classes = useStyles();
+  // const classes = useStyles();
 
   return (
     <Box>
