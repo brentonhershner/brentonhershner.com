@@ -4,17 +4,17 @@ import {
   Box,
   Container,
   CssBaseline,
-  ThemeProvider,
   IconButton,
   responsiveFontSizes,
 } from '@material-ui/core';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
-import selfie from '../images/BrentonPier66.jpg';
+// import selfie from '../images/BrentonPier66.jpg';
+import ProfilePhoto from '../components/ProfilePhoto';
 
 const stringToBool = (str) => {
   if (str === true || str === 'true') { return true; }
@@ -33,7 +33,7 @@ export default function Home() {
   const [darkMode, setDarkMode] = useState(darkModeContext);
 
   let darkTheme = darkMode ?? darkModeContext;
-  let theme = createMuiTheme({ palette: { type: darkTheme ? 'dark' : 'light' }, })
+  let theme = createTheme({ palette: { type: darkTheme ? 'dark' : 'light' }, })
   theme = responsiveFontSizes(theme);
 
   const toggleDarkMode = () => {
@@ -43,7 +43,6 @@ export default function Home() {
   }
 
   return (
-
     <div className='application'>
       <Helmet>
         <meta charSet='utf-8' />
@@ -59,7 +58,7 @@ export default function Home() {
         <CssBaseline />
         <Container
           disableGutters
-          className='App'
+          className='LandingPage'
           position='absolute'
           style={{ margin: '0' }}
         >
@@ -81,12 +80,13 @@ export default function Home() {
             </IconButton>
           </Box>
           <Title />
-          <Card>
+          {/* <Card>
             <CardMedia
               image={selfie}
               title="Brenton Selfie"
             />
-          </Card>
+          </Card> */}
+          {/* <ProfilePhoto /> */}
         </Container>
       </ThemeProvider>
     </div >
