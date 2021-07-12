@@ -33,14 +33,14 @@ export default function App() {
     // <StyledEngineProvider injectFirst>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container
+      <Box
         // disableGutters
         className='App'
         position='absolute'
         style={{
-          margin: '0',
           height: '100vh',
-          maxWidth: '100vw',
+          width: '100vw',
+          minWidth: '310px',
           overflowX: 'hidden',
         }}
       >
@@ -63,7 +63,7 @@ export default function App() {
         </Box>
         <Title />
         <Copyright />
-      </Container>
+      </Box>
     </ThemeProvider>
     // </StyledEngineProvider>
   );
