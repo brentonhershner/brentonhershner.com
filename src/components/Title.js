@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Box,
-  Typography,
-} from '@material-ui/core';
+import { Box, Typography, } from '@material-ui/core';
 import ProfilePhoto from './ProfilePhoto';
 import Resume from './Resume';
 import LinkedIn from './LinkedIn';
@@ -42,7 +39,9 @@ export default function Title() {
         <Typography
           variant='subtitle1'
           align='center'
-        >Software Engineer | BS in Mechancial Engineering | MBA</Typography>
+        >
+          Software Engineer | BS in Mechancial Engineering | MBA
+        </Typography>
         <Box
           width='50%'
           display='flex'
@@ -51,9 +50,7 @@ export default function Title() {
           justifyContent='space-around'
           alignItems='center'
         >
-          {/* <IconButton >
-                  <EmailIcon />
-                </IconButton> */}
+          {/* <Email /> */}
           <Resume />
           <LinkedIn />
           <Github />
