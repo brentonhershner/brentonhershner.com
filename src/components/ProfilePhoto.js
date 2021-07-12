@@ -6,7 +6,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 export default function ProfilePhoto() {
   return (
     <Card
-      sx={{ maxWidth: 200, borderRadius: '50%' }}
+      style={{ maxWidth: 200, borderRadius: '50%' }}
       >
       <CardMedia
       sx={{ height: 0 }}

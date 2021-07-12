@@ -6,16 +6,16 @@ import {
   IconButton,
   responsiveFontSizes,
 } from '@material-ui/core';
-import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
-import { StyledEngineProvider } from '@material-ui/core/styles';
+// import { StyledEngineProvider } from '@material-ui/core/styles';
 import { previousOrPreferredTheme } from '../lib/helpers';
 import Copyright from './Copyright';
 
-const darkTheme = createTheme({ palette: { mode: 'dark' }, });
-const lightTheme = createTheme({ palette: { mode: 'light' }, });
+const darkTheme = createMuiTheme({ palette: { type: 'dark' }, });
+const lightTheme = createMuiTheme({ palette: { type: 'light' }, });
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(previousOrPreferredTheme);
@@ -30,7 +30,7 @@ export default function App() {
   }
 
   return (
-    <StyledEngineProvider injectFirst>
+    // <StyledEngineProvider injectFirst>
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <Container
@@ -60,6 +60,6 @@ export default function App() {
           <Copyright />
         </Container>
       </ThemeProvider>
-    </StyledEngineProvider>
+    // </StyledEngineProvider>
   );
 };
