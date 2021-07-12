@@ -12,6 +12,7 @@ import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
 import { StyledEngineProvider } from '@material-ui/core/styles';
 import { previousOrPreferredTheme } from '../lib/helpers';
+import Copyright from './Copyright';
 
 const darkTheme = createTheme({ palette: { mode: 'dark' }, });
 const lightTheme = createTheme({ palette: { mode: 'light' }, });
@@ -56,6 +57,7 @@ export default function App() {
             </IconButton>
           </Box>
           <Title />
+          <Copyright />
         </Container>
       </ThemeProvider>
     </StyledEngineProvider>

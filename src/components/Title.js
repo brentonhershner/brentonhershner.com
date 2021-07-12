@@ -17,58 +17,55 @@ import Instagram from './Instagram';
 // });
 
 export default function Title() {
-  // const classes = useStyles();
-
   return (
-    <Box className='page'>
+    <Box
+      className='wordsAndPhoto'
+      display='flex'
+      flexDirection='row'
+      flexWrap='wrap-reverse'
+      position='relative'
+      alignItems='center'
+      alignContent='center'
+      justifyContent='center'
+      sx={{
+        height: '100vh', width: '100vw',
+        '& > *': {
+          margin: '10px',
+        }
+      }}
+    >
       <Box
-        className='wordsAndPhoto'
-        display='flex'
-        flexDirection='row'
-        flexWrap='wrap-reverse'
+        className='wordsAndLinks'
         position='relative'
+        display='flex'
+        flexDirection='column'
         alignItems='center'
-        alignContent='center'
         justifyContent='center'
-        sx={{ height: '100vh', width: '100vw',
-          '& > *': {
-            margin: '10px',
-          }
-        }}
+      // style={{ height: '100vh', width: '100vw', margin: 0 }}
       >
+        <Typography variant='h2' component='h1' align='center' >
+          Brenton Hershner
+        </Typography>
+        <Typography variant='subtitle1' align='center' >
+          Software Engineer | BS in Mechancial Engineering | MBA
+        </Typography>
         <Box
-          className='wordsAndLinks'
-          position='relative'
+          width='50%'
           display='flex'
-          flexDirection='column'
+          maxWidth='600px'
+          flexDirection='row'
+          justifyContent='space-around'
           alignItems='center'
-          justifyContent='center'
-        // style={{ height: '100vh', width: '100vw', margin: 0 }}
         >
-          <Typography variant='h2' component='h1' align='center' >
-            Brenton Hershner
-          </Typography>
-          <Typography variant='subtitle1' align='center' >
-            Software Engineer | BS in Mechancial Engineering | MBA
-          </Typography>
-          <Box
-            width='50%'
-            display='flex'
-            maxWidth='600px'
-            flexDirection='row'
-            justifyContent='space-around'
-            alignItems='center'
-          >
-            {/* <Email /> */}
-            <Resume />
-            <LinkedIn />
-            <Github />
-            <Twitter />
-            <Instagram />
-          </Box>
+          {/* <Email /> */}
+          <Resume />
+          <LinkedIn />
+          <Github />
+          <Twitter />
+          <Instagram />
         </Box>
-        <ProfilePhoto />
       </Box>
+      <ProfilePhoto />
     </Box>
   )
 }
