@@ -31,35 +31,40 @@ export default function App() {
 
   return (
     // <StyledEngineProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Container
-          disableGutters
-          className='App'
-          position='absolute'
-          style={{ margin: '0' }}
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Container
+        // disableGutters
+        className='App'
+        position='absolute'
+        style={{
+          margin: '0',
+          height: '100vh',
+          maxWidth: '100vw',
+          overflowX: 'hidden',
+        }}
+      >
+        <Box
+          style={{
+            position: 'absolute',
+            zIndex: 1000,
+            right: '0'
+          }}
+          m={1}
         >
-          <Box
-            style={{
-              position: 'absolute',
-              zIndex: 1000,
-              right: '0'
-            }}
-            m={1}
+          <IconButton
+            aria-label='dark mode toggle'
+            size='small'
+            position='relative'
+            onClick={toggleDarkMode}
           >
-            <IconButton
-              aria-label='dark mode toggle'
-              size='small'
-              position='relative'
-              onClick={toggleDarkMode}
-            >
-              {darkMode ? <Brightness7Icon /> : <Brightness3Icon />}
-            </IconButton>
-          </Box>
-          <Title />
-          <Copyright />
-        </Container>
-      </ThemeProvider>
+            {darkMode ? <Brightness7Icon /> : <Brightness3Icon />}
+          </IconButton>
+        </Box>
+        <Title />
+        <Copyright />
+      </Container>
+    </ThemeProvider>
     // </StyledEngineProvider>
   );
 };

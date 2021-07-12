@@ -28,7 +28,7 @@ export default function Title() {
       alignContent='center'
       justifyContent='center'
       sx={{
-        height: '100vh', width: '100vw',
+        height: '100%', width: '100%',
         '& > *': {
           margin: '10px',
         }
