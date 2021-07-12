@@ -18,3 +18,9 @@ export default function Home() {
     </div >
   )
 }
+
+
+/*
+@material-ui/core@latest @material-ui/icons@latest @material-ui/styles@latest
+@material-ui/core@next @material-ui/icons@next @material-ui/styles@next
+*/

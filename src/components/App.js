@@ -6,7 +6,7 @@ import {
   IconButton,
   responsiveFontSizes,
 } from '@material-ui/core';
-import { createTheme, ThemeProvider, } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
@@ -51,7 +51,7 @@ export default function App() {
               aria-label='dark mode toggle'
               size='small'
               position='relative'
-              onClick={() => { toggleDarkMode(!darkMode) }}
+              onClick={toggleDarkMode}
             >
               {darkMode ? <Brightness7Icon /> : <Brightness3Icon />}
             </IconButton>
