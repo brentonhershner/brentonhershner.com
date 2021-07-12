@@ -1,11 +1,11 @@
 import React from 'react';
 import { Box, Typography, } from '@material-ui/core';
 import ProfilePhoto from './ProfilePhoto';
-import Resume from './Resume';
-import LinkedIn from './LinkedIn';
-import Github from './Github';
-import Twitter from './Twitter';
-import Instagram from './Instagram';
+import Resume from './Links/Resume';
+import LinkedIn from './Links/LinkedIn';
+import Github from './Links/Github';
+import Twitter from './Links/Twitter';
+import Instagram from './Links/Instagram';
 
 // const useStyles = makeStyles({
 //   root: {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Tooltip, IconButton } from '@material-ui/core';
 import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
-import pdf from '../../static/BrentonHershnerResume.pdf';
+import pdf from '../../../static/BrentonHershnerResume.pdf';
 
 export default function Resume() {
   return (
