@@ -8,14 +8,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-theme-material-ui`,
-      options: {
-        stylesConfig: {
-          disableAutoprefixing: true,
-          disableMinification: true,
-        },
-      }
-    },
+    `gatsby-theme-material-ui`,
   ],
 }
