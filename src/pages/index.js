@@ -1,46 +1,21 @@
 import React, { useState } from 'react';
 import { Helmet } from 'react-helmet';
-import {
-  Box,
-  Container,
-  CssBaseline,
-  ThemeProvider,
-  IconButton,
-  responsiveFontSizes,
-} from '@material-ui/core';
-import Card from '@material-ui/core/Card';
-import CardMedia from '@material-ui/core/CardMedia';
-import { createMuiTheme } from '@material-ui/core/styles';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
-import Title from '../components/Title';
-import selfie from '../images/BrentonPier66.jpg';
 
-const stringToBool = (str) => {
-  if (str === true || str === 'true') { return true; }
-  if (str === false || str === 'false') { return false; }
-  return null;
-}
+import App from '../components/App';
 
-const isBrowser = typeof window !== "undefined"
+// const stringToBool = (str) => {
+//   if (str === true || str === 'true') { return true; }
+//   if (str === false || str === 'false') { return false; }
+//   return null;
+// }
+
+// const isBrowser = typeof window !== "undefined"
 
 export default function Home() {
-  const darkModeQuery = isBrowser ? 
-    window.matchMedia('(prefers-color-scheme: dark)').matches : null;
-  let darkModeStored = isBrowser ? localStorage.getItem('darkMode') : null;
-  const darkModeContext = stringToBool(darkModeStored) ?? darkModeQuery;
-
-  const [darkMode, setDarkMode] = useState(darkModeContext);
-
-  let darkTheme = darkMode ?? darkModeContext;
-  let theme = createMuiTheme({ palette: { type: darkTheme ? 'dark' : 'light' }, })
-  theme = responsiveFontSizes(theme);
-
-  const toggleDarkMode = () => {
-    const newDarkMode = !darkMode;
-    localStorage.setItem('darkMode', newDarkMode);
-    setDarkMode(newDarkMode);
-  }
+  // const darkModeQuery = isBrowser ?
+  //   window.matchMedia('(prefers-color-scheme: dark)').matches : null;
+  // let darkModeStored = isBrowser ? localStorage.getItem('darkMode') : null;
+  // const darkModeContext = stringToBool(darkModeStored) ?? darkModeQuery;
 
   return (
 
@@ -55,40 +30,7 @@ export default function Home() {
         <title>Brenton Hershner</title>
       </Helmet>
 
-      <ThemeProvider theme={theme}>
-        <CssBaseline />
-        <Container
-          disableGutters
-          className='App'
-          position='absolute'
-          style={{ margin: '0' }}
-        >
-          <Box
-            style={{
-              position: 'absolute',
-              zIndex: 1000,
-              right: '0'
-            }}
-            m={1}
-          >
-            <IconButton
-              aria-label='dark mode toggle'
-              size='small'
-              position='relative'
-              onClick={() => { toggleDarkMode(!darkMode) }}
-            >
-              {darkMode ? <Brightness7Icon /> : <Brightness3Icon />}
-            </IconButton>
-          </Box>
-          <Title />
-          <Card>
-            <CardMedia
-              image={selfie}
-              title="Brenton Selfie"
-            />
-          </Card>
-        </Container>
-      </ThemeProvider>
+      <App/>
     </div >
   )
 }
