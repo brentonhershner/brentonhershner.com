@@ -1,17 +1,8 @@
 import React from 'react';
 import {
   Box,
-  IconButton,
-  Tooltip,
   Typography,
 } from '@material-ui/core';
-// import { makeStyles } from '@material-ui/styles';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import InstagramIcon from '@material-ui/icons/Instagram';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
-import pdf from '../../static/BrentonHershnerResume.pdf';
 import ProfilePhoto from './ProfilePhoto';
 import Resume from './Resume';
 import LinkedIn from './LinkedIn';
