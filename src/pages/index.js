@@ -1,24 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-
 import App from '../components/App';
 
-// const stringToBool = (str) => {
-//   if (str === true || str === 'true') { return true; }
-//   if (str === false || str === 'false') { return false; }
-//   return null;
-// }
-
-// const isBrowser = typeof window !== "undefined"
-
 export default function Home() {
-  // const darkModeQuery = isBrowser ?
-  //   window.matchMedia('(prefers-color-scheme: dark)').matches : null;
-  // let darkModeStored = isBrowser ? localStorage.getItem('darkMode') : null;
-  // const darkModeContext = stringToBool(darkModeStored) ?? darkModeQuery;
-
   return (
-
     <div className='application'>
       <Helmet>
         <meta charSet='utf-8' />
@@ -29,7 +14,6 @@ export default function Home() {
         <meta name='revised' content='BrentonHershner, 7/11/2021' />
         <title>Brenton Hershner</title>
       </Helmet>
-
       <App/>
     </div >
   )

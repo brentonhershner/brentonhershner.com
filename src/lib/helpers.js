@@ -11,7 +11,7 @@ const darkModeStored = isBrowser ?
 
 const darkModePreference = isBrowser ?
   (window.matchMedia('(prefers-color-scheme: dark)').matches ?
-  true : null ) : null;
+  true : false ) : null;
 
 export const previousOrPreferredTheme = darkModeStored ??
   darkModePreference ?? false;
