@@ -1,8 +1,6 @@
 import React from 'react';
 import {
   Box,
-  IconButton,
-  Tooltip,
   Typography,
 } from '@material-ui/core';
 // import { makeStyles } from '@material-ui/styles';
@@ -39,9 +37,7 @@ export default function Title() {
           variant='h1'
           component='h1'
           align='center'
-        >
-          Brenton Hershner
-        </Typography>
+        >Brenton Hershner</Typography>
         <Typography
           variant='subtitle1'
           align='center'
@@ -54,9 +50,7 @@ export default function Title() {
           justifyContent='space-around'
           alignItems='center'
         >
-          {/* <IconButton >
-                  <EmailIcon />
-                </IconButton> */}
+          {/* <EmailIcon /> */}
           <Resume />
           <LinkedIn />
           <Github />
