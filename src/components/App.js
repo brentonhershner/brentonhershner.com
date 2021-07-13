@@ -1,7 +1,7 @@
 import React, { useState, } from 'react';
 import {
   Box,
-  Container,
+  // Container,
   CssBaseline,
   IconButton,
   responsiveFontSizes,
@@ -13,7 +13,7 @@ import Title from '../components/Title';
 // import { StyledEngineProvider } from '@material-ui/core/styles';
 import { previousOrPreferredTheme } from '../lib/helpers';
 import Copyright from './Copyright';
-import Projects from './Projects';
+// import Projects from './Projects';
 
 const darkTheme = createMuiTheme({ palette: { type: 'dark' }, });
 const lightTheme = createMuiTheme({ palette: { type: 'light' }, });

@@ -6,15 +6,7 @@ import LinkedIn from './Links/LinkedIn';
 import Github from './Links/Github';
 import Twitter from './Links/Twitter';
 import Instagram from './Links/Instagram';
-
-// const useStyles = makeStyles({
-//   root: {
-//     maxWidth: 345,
-//   },
-//   media: {
-//     height: 140,
-//   },
-// });
+// import BrentonHershner from '../../assets/BrentonHershner.svg';
 
 export default function Title() {
   return (
@@ -43,6 +35,7 @@ export default function Title() {
         justifyContent='center'
       // style={{ height: '100vh', width: '100vw', margin: 0 }}
       >
+        {/* <BrentonHershner /> */}
         <Typography variant='h2' component='h1' align='center' >
           Brenton Hershner
         </Typography>
