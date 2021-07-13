@@ -26,6 +26,7 @@ export default function Title() {
         }
       }}
     >
+      <ProfilePhoto />
       <Box
         className='wordsAndLinks'
         position='relative'
@@ -58,7 +59,7 @@ export default function Title() {
           <Instagram />
         </Box>
       </Box>
-      <ProfilePhoto />
+
     </Box>
   )
 }
