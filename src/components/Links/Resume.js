@@ -9,7 +9,8 @@ export default function Resume() {
       <IconButton
         target="_blank"
         rel="noopener"
-        href={pdf}
+        // href={pdf}
+        href={`../../BrentonHershnerResume.pdf`}
         aria-label="Resume of Brenton Hershner"
       >
         <InsertDriveFileIcon />
