@@ -13,7 +13,7 @@ import Title from '../components/Title';
 // import { StyledEngineProvider } from '@material-ui/core/styles';
 import { previousOrPreferredTheme } from '../lib/helpers';
 import Copyright from './Copyright';
-// import Projects from './Projects';
+import Projects from './Projects';
 
 const darkTheme = createMuiTheme({ palette: { type: 'dark' }, });
 const lightTheme = createMuiTheme({ palette: { type: 'light' }, });
@@ -31,7 +31,7 @@ export default function App() {
   }
 
   return (
-    // <StyledEngineProvider injectFirst>
+    // <StyledEngineProvider injectFirst> {/* this needs added for MUI v5 */}
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Box
@@ -67,6 +67,6 @@ export default function App() {
         <Copyright />
       </Box>
     </ThemeProvider>
-    // </StyledEngineProvider>
+    // </StyledEngineProvider> {/* this needs added for MUI v5 */}
   );
 };
