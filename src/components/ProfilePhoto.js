@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
-
+// import profilePhoto from '../../assets/BrentonPier66smaller.jpg';
 
 export default function ProfilePhoto() {
   return (
@@ -11,7 +11,9 @@ export default function ProfilePhoto() {
       <CardMedia
       sx={{ height: 0 }}
         component="img"
-        image="../../BrentonPier66smaller.jpg"
+        // image="../../assets/BrentonPier66smaller.jpg"
+        src="../../BrentonPier66smaller.jpg"
+        // src={profilePhoto}
         title="Brenton Hershner Profile Photo"
         alt="Brenton Hershner Profile Photo"
       />

@@ -2,7 +2,7 @@ import React from 'react';
 import { Box, Card, CardActionArea, CardMedia } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 import Typography from '@material-ui/core/Typography'
-import maintenanceImg from './Maintenance.png';
+// import maintenanceImg from './Maintenance.png';
 
 const useStyles = makeStyles({
   root: {
