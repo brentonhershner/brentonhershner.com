@@ -14,7 +14,7 @@ export default function Title() {
       className='wordsAndPhoto'
       display='flex'
       flexDirection='row'
-      flexWrap='wrap-reverse'
+      flexWrap='wrap'
       position='relative'
       alignItems='center'
       alignContent='center'

@@ -11,7 +11,7 @@ export default function ProfilePhoto() {
       <CardMedia
       sx={{ height: 0 }}
         component="img"
-        image="../BrentonPier66smaller.jpg"
+        image="../../BrentonPier66smaller.jpg"
         title="Brenton Hershner Profile Photo"
         alt="Brenton Hershner Profile Photo"
       />
