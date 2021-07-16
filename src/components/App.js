@@ -18,7 +18,7 @@ import Copyright from './Copyright';
 const darkTheme = createTheme({ palette: { type: 'dark' }, });
 const lightTheme = createTheme({ palette: { type: 'light' }, });
 
-export default function App() {
+const App = () => {
   const [darkMode, setDarkMode] = useState(previousOrPreferredTheme);
 
   let theme = darkMode ? darkTheme : lightTheme;
@@ -70,3 +70,5 @@ export default function App() {
     // </StyledEngineProvider> {/* this needs added for MUI v5 */}
   );
 };
+
+export default App;

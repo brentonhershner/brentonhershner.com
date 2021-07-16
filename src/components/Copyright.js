@@ -2,7 +2,7 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import { Link } from 'gatsby-theme-material-ui';
 
-export default function Copyright() {
+const Copyright = () => {
   return (
     <Typography variant="body2" color="secondary" align="center">
       {'Copyright © '}
@@ -14,3 +14,5 @@ export default function Copyright() {
     </Typography>
   );
 }
+
+export default Copyright;

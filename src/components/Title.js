@@ -1,14 +1,10 @@
 import React from 'react';
 import { Box, Typography, } from '@material-ui/core';
 import ProfilePhoto from './ProfilePhoto';
-import Resume from './Links/Resume';
-import LinkedIn from './Links/LinkedIn';
-import Github from './Links/Github';
-import Twitter from './Links/Twitter';
-import Instagram from './Links/Instagram';
+import Links from './Links/Links';
 // import BrentonHershner from '../../assets/BrentonHershner.svg';
 
-export default function Title() {
+const Title = () => {
   return (
     <Box
       className='wordsAndPhoto'
@@ -51,15 +47,13 @@ export default function Title() {
           justifyContent='space-around'
           alignItems='center'
         >
-          {/* <Email /> */}
-          <Resume />
-          <LinkedIn />
-          <Github />
-          <Twitter />
-          <Instagram />
+
+          <Links />
         </Box>
       </Box>
 
     </Box>
   )
 }
+
+export default Title;

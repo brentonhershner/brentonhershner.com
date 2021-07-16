@@ -3,7 +3,7 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 // import profilePhoto from '../../assets/BrentonPier66smaller.jpg';
 
-export default function ProfilePhoto() {
+const ProfilePhoto = () => {
   return (
     <Card
       style={{ maxWidth: 200, borderRadius: '50%' }}
@@ -20,3 +20,5 @@ export default function ProfilePhoto() {
     </Card>
   );
 }
+
+export default ProfilePhoto;

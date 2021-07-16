@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import App from '../components/App';
 
-export default function Home() {
+const Home = () => {
   return (
     <div className='application'>
       <Helmet>
@@ -19,6 +19,7 @@ export default function Home() {
   )
 }
 
+export default Home;
 
 /*
 @material-ui/core@latest @material-ui/icons@latest @material-ui/styles@latest
