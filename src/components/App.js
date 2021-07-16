@@ -6,7 +6,7 @@ import {
   IconButton,
   responsiveFontSizes,
 } from '@material-ui/core';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { createTheme, ThemeProvider } from '@material-ui/core/styles';
 import Brightness3Icon from '@material-ui/icons/Brightness3';
 import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
@@ -15,8 +15,8 @@ import { previousOrPreferredTheme } from '../lib/helpers';
 import Copyright from './Copyright';
 // import Projects from './Projects';
 
-const darkTheme = createMuiTheme({ palette: { type: 'dark' }, });
-const lightTheme = createMuiTheme({ palette: { type: 'light' }, });
+const darkTheme = createTheme({ palette: { type: 'dark' }, });
+const lightTheme = createTheme({ palette: { type: 'light' }, });
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(previousOrPreferredTheme);
