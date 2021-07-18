@@ -2,7 +2,7 @@ import React from 'react';
 import { Tooltip, IconButton } from '@material-ui/core';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 
-export default function LInkedIn() {
+export default function LinkedIn() {
   return (
     <Tooltip title="LinkedIn">
     <IconButton
