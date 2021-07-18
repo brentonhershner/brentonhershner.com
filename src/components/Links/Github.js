@@ -2,7 +2,7 @@ import React from 'react';
 import { Tooltip, IconButton } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 
-export default function GitHub() {
+export default function Github () {
   return (
     <Tooltip title="GitHub">
     <IconButton

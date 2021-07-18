@@ -1,7 +1,7 @@
 import React from 'react';
 import Resume from './Resume';
 import LinkedIn from './LinkedIn';
-import GitHub from './GitHub';
+import Github from './Github';
 import Twitter from './Twitter';
 import Instagram from './Instagram';
 
@@ -11,7 +11,7 @@ const Links = () => {
       {/* <Email /> */}
       <Resume />
       <LinkedIn />
-      <GitHub />
+      <Github />
       <Twitter />
       <Instagram />
     </React.Fragment>
