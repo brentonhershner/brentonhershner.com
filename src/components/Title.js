@@ -9,6 +9,7 @@ const Title = () => {
     <Box
       className='wordsAndPhoto'
       display='flex'
+      flex='1 0 0'
       flexDirection='row'
       flexWrap='wrap'
       position='relative'
@@ -16,7 +17,8 @@ const Title = () => {
       alignContent='center'
       justifyContent='center'
       sx={{
-        height: '100%', width: '100%',
+        // height: '100%',
+        width: '100%',
         '& > *': {
           margin: '10px',
         }

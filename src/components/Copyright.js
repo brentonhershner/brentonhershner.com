@@ -4,9 +4,11 @@ import { Link } from 'gatsby-theme-material-ui';
 
 const Copyright = () => {
   return (
-    <Typography variant="body2" color="secondary" align="center">
+    <Typography variant="body2" color="textPrimary" align="center">
       {'Copyright © '}
-      <Link color="inherit" href="https://brentonhershner.com/">
+      <Link
+        color="inherit"
+        href="https://brentonhershner.com/">
         brentonhershner.com
       </Link>{' '}
       {new Date().getFullYear()}

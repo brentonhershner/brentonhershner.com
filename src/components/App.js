@@ -1,18 +1,12 @@
 import React, { useState, } from 'react';
-import {
-  Box,
-  // Container,
-  CssBaseline,
-  IconButton,
-  responsiveFontSizes,
-} from '@material-ui/core';
+import { Box, CssBaseline, responsiveFontSizes, } from '@material-ui/core';
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
-import Brightness3Icon from '@material-ui/icons/Brightness3';
-import Brightness7Icon from '@material-ui/icons/Brightness7';
 import Title from '../components/Title';
 // import { StyledEngineProvider } from '@material-ui/core/styles';
 import { previousOrPreferredTheme } from '../lib/helpers';
+import DarkToggle from './DarkToggle';
 import Copyright from './Copyright';
+import AboutMe from './AboutMe';
 // import Projects from './Projects';
 
 const darkTheme = createTheme({ palette: { type: 'dark' }, });
@@ -38,6 +32,9 @@ const App = () => {
         // disableGutters
         className='App'
         position='absolute'
+        display='flex'
+        flexDirection='column'
+        // justifyContent='space-between'
         style={{
           height: '100vh',
           width: '100vw',
@@ -45,24 +42,9 @@ const App = () => {
           overflowX: 'hidden',
         }}
       >
-        <Box
-          style={{
-            position: 'absolute',
-            zIndex: 1000,
-            right: '0'
-          }}
-          m={1}
-        >
-          <IconButton
-            aria-label='dark mode toggle'
-            size='small'
-            position='relative'
-            onClick={toggleDarkMode}
-          >
-            {darkMode ? <Brightness7Icon /> : <Brightness3Icon />}
-          </IconButton>
-        </Box>
+        <DarkToggle darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
         <Title />
+        {/* <AboutMe /> */}
         {/* <Projects /> */}
         <Copyright />
       </Box>
