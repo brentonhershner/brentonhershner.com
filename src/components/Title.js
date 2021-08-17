@@ -2,7 +2,6 @@ import React from 'react';
 import { Box, Typography, } from '@material-ui/core';
 import ProfilePhoto from './ProfilePhoto';
 import Links from './Links/Links';
-// import BrentonHershner from '../../assets/BrentonHershner.svg';
 
 const Title = () => {
   return (
@@ -32,9 +31,7 @@ const Title = () => {
         flexDirection='column'
         alignItems='center'
         justifyContent='center'
-      // style={{ height: '100vh', width: '100vw', margin: 0 }}
       >
-        {/* <BrentonHershner /> */}
         <Typography variant='h2' component='h1' align='center' >
           Brenton Hershner
         </Typography>
@@ -49,7 +46,6 @@ const Title = () => {
           justifyContent='space-around'
           alignItems='center'
         >
-
           <Links />
         </Box>
       </Box>
