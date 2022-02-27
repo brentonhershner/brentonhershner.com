@@ -82,7 +82,7 @@ const WordleHelper = () => {
   }, [possible]);
 
   return (
-    <div className="application">
+    <div className="App">
       <header className="App-header">
         <h1>Wordle Helper</h1>
         <h2 className="label">{possible.length} possible words</h2>
@@ -110,9 +110,11 @@ const WordleHelper = () => {
             );
           })}
         </form>
+      </header>
+      <div className="results">
         {excluded || !located.every((l) => l === "") ? (
           <>
-            <ul>
+            <ul className="list">
               {possible.slice(0, WORD_DISPLAY_LIMIT).map((word) => (
                 <li key={word}>{word}</li>
               ))}
@@ -129,7 +131,7 @@ const WordleHelper = () => {
         ) : (
           <p>Try to filter down the list of words using the fields above.</p>
         )}
-      </header>
+      </div>
     </div>
   );
 };

@@ -1,16 +1,41 @@
 .App {
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  overflow-x:hidden;
 }
 
-.App-header {
+.App, .App-header {
+  text-align: center;
   background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   font-size: calc(10px + 2vmin);
   color: white;
+
+}
+
+.results {
+  overflow-y:auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:20px;
+  width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.results::-webkit-scrollbar {
+  display: none;
+}
+
+.list {
+  width: fit-content;
+  list-style: none;
+  padding: 0;
 }
 
 .App-link {
