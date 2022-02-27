@@ -11,6 +11,8 @@ const WordleHelper = () => {
   const [misplaced, setMisplaced] = useState("");
   const [located, setLocated] = useState(Array(5).fill(""));
 
+  const isFiltered = excluded || misplaced || !located.every((l) => !l);
+
   const changeLetter = (e, position) => {
     const form = e.target.form;
     const key = e.keyCode;
@@ -37,17 +39,17 @@ const WordleHelper = () => {
       return;
     }
     const newLocated = located.slice();
-    newLocated.splice(position, 1, newLetter.toLowerCase());
+    newLocated.splice(position, 1, newLetter.toUpperCase());
     setLocated(newLocated);
     e.preventDefault();
   };
 
   const updateExcluded = (e) => {
-    setExcluded(unique(e.target.value.toLowerCase().split("")).join(""));
+    setExcluded(unique(e.target.value.toUpperCase().split("")).join(""));
   };
 
   const updateMisplaced = (e) => {
-    setMisplaced(e.target.value.toLowerCase());
+    setMisplaced(e.target.value.toUpperCase());
   };
 
   const filterLocated = (word) => {
@@ -96,7 +98,7 @@ const WordleHelper = () => {
         <h1>Wordle Helper</h1>
 
         <h2 className="label">Correct Letters</h2>
-        <form className="">
+        <form className="inputs">
           {located.map((value, position) => {
             return (
               <input
@@ -109,30 +111,30 @@ const WordleHelper = () => {
               />
             );
           })}
-        </form>
 
-        <h2 className="label">Correct Letters / Wrong Spot</h2>
-        <form className="">
+          <h2 className="label">Misplaced but Correct</h2>
           <input
-            name="wrongSpot"
+            className="misplaced"
+            name="misplaced"
             type={"text"}
             value={misplaced}
             onChange={updateMisplaced}
           />
-        </form>
 
-        <h2 className="label">Rejects</h2>
-        <input
-          name="notUsed"
-          type={"text"}
-          value={excluded}
-          onChange={updateExcluded}
-        />
+          <h2 className="label">Rejects</h2>
+          <input
+            className="rejects"
+            name="rejects"
+            type={"text"}
+            value={excluded}
+            onChange={updateExcluded}
+          />
+        </form>
       </header>
       <div className="results">
-        <h2 className="label">{possible.length} possible words</h2>
-        {excluded || misplaced || !located.every((l) => !l) ? (
+        {isFiltered ? (
           <>
+            <h2 className="label">{possible.length} possible words</h2>
             <ul className="list">
               {possible.slice(0, WORD_DISPLAY_LIMIT).map((word) => (
                 <li key={word}>{word}</li>

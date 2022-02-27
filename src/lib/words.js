@@ -2308,4 +2308,4 @@ export const words = [
   "artsy",
   "rural",
   "shave",
-];
+].map((word) => word.toUpperCase());
