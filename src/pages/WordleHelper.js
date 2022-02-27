@@ -85,7 +85,6 @@ const WordleHelper = () => {
     <div className="App">
       <header className="App-header">
         <h1>Wordle Helper</h1>
-        <h2 className="label">{possible.length} possible words</h2>
 
         <h2 className="label">Not Used Letters</h2>
         <input
@@ -112,6 +111,7 @@ const WordleHelper = () => {
         </form>
       </header>
       <div className="results">
+        <h2 className="label">{possible.length} possible words</h2>
         {excluded || !located.every((l) => l === "") ? (
           <>
             <ul className="list">
