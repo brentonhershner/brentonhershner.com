@@ -15,34 +15,16 @@ const WordleHelper = () => {
   const isFiltered = excluded || misplaced || !located.every((l) => !l);
 
   const changeLetter = (e, position) => {
-    const form = e.target.form;
-    const key = e.keyCode;
-    let newLetter = "";
-    if (key >= 65 && key <= 90) {
-      // a-z keys
-      newLetter = e.key;
-      if (position < form.elements.length - 1) {
-        form.elements[position + 1].focus();
-      }
-    } else if (key === 9) {
-      // tab
-      return;
-    } else if (key === 46) {
-      // forward delete
-      newLetter = "";
-    } else if (key === 8) {
-      // backspace
-      newLetter = "";
-      if (position > 0) {
-        form.elements[position - 1].focus();
-      }
-    } else {
-      return;
-    }
+    const newLetter = e.target.value.slice(-1);
     const newLocated = located.slice();
     newLocated.splice(position, 1, newLetter.toUpperCase());
     setLocated(newLocated);
-    e.preventDefault();
+
+    if (newLetter && e.target.nextSibling) {
+      e.target.nextSibling.focus();
+    } else if (e.target.previousSibling) {
+      e.target.previousSibling.focus();
+    }
   };
 
   const updateExcluded = (e) => {
@@ -123,7 +105,7 @@ const WordleHelper = () => {
                 value={value}
                 className="letter"
                 type={"text"}
-                onKeyDown={(e) => changeLetter(e, position)}
+                onChange={(e) => changeLetter(e, position)}
               />
             );
           })}
