@@ -4,6 +4,8 @@ import { words } from "../lib/words.js";
 import { Helmet } from "react-helmet";
 import unique from "just-unique";
 
+const isValidInput = (input) => !!input.match(/^[a-zA-Z]*$/);
+
 const WordleHelper = () => {
   const WORD_DISPLAY_LIMIT = 500;
 
@@ -16,6 +18,9 @@ const WordleHelper = () => {
 
   const changeLetter = (e, position) => {
     const newLetter = e.target.value.slice(-1);
+    if (!isValidInput(newLetter)) {
+      return;
+    }
     const newLocated = located.slice();
     newLocated.splice(position, 1, newLetter.toUpperCase());
     setLocated(newLocated);
@@ -28,10 +33,16 @@ const WordleHelper = () => {
   };
 
   const updateExcluded = (e) => {
+    if (!isValidInput(e.target.value)) {
+      return;
+    }
     setExcluded(unique(e.target.value.toUpperCase().split("")).join(""));
   };
 
   const updateMisplaced = (e) => {
+    if (!isValidInput(e.target.value)) {
+      return;
+    }
     setMisplaced(e.target.value.toUpperCase());
   };
 
