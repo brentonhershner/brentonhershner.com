@@ -42,14 +42,13 @@ const WordleHelper = () => {
       return;
     }
     const newLocated = located.slice();
-    newLocated.splice(position, 1, newLetter);
+    newLocated.splice(position, 1, newLetter.toLowerCase());
     setLocated(newLocated);
     e.preventDefault();
   };
 
   const updateExcluded = (e) => {
-    console.log(`update Excluded: ${e.target.value}`);
-    setExcluded(e.target.value);
+    setExcluded(e.target.value.toLowerCase());
   };
 
   const filterExcluded = (word) => {
@@ -69,15 +68,11 @@ const WordleHelper = () => {
 
   useEffect(() => {
     if (!excluded) {
-      console.log("make all available");
-      console.log(words5letters.length);
       setPossible(words5letters);
     }
     const updatedList = words5letters
       .filter(filterExcluded)
       .filter(filterLocated);
-    // (words5letters, excluded);
-    // const updatedList2 = filterLocated(updatedList, located);
 
     setPossible(updatedList);
   }, [excluded, located]);
