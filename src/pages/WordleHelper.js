@@ -32,6 +32,10 @@ const WordleHelper = () => {
     }
   };
 
+  const deselect = (e) => {
+    e.target.selectionStart = e.target.value.length;
+  };
+
   const updateExcluded = (e) => {
     if (!isValidInput(e.target.value)) {
       return;
@@ -127,6 +131,7 @@ const WordleHelper = () => {
             name="misplaced"
             type={"text"}
             value={misplaced}
+            onFocus={deselect}
             onChange={updateMisplaced}
           />
 
@@ -136,6 +141,7 @@ const WordleHelper = () => {
             name="rejects"
             type={"text"}
             value={excluded}
+            onFocus={deselect}
             onChange={updateExcluded}
           />
         </form>
