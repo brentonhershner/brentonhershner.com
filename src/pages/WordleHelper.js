@@ -36,6 +36,13 @@ const WordleHelper = () => {
     e.target.selectionStart = e.target.value.length;
   };
 
+  const onKeyDown = (e) => {
+    if (!e.target.value && e.key === "Backspace" && e.target.previousSibling) {
+      e.target.previousSibling.focus();
+      e.preventDefault();
+    }
+  };
+
   const updateExcluded = (e) => {
     if (!isValidInput(e.target.value)) {
       return;
@@ -121,6 +128,7 @@ const WordleHelper = () => {
                 className="letter"
                 type={"text"}
                 onChange={(e) => changeLetter(e, position)}
+                onKeyDown={onKeyDown}
               />
             );
           })}
