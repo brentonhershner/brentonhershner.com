@@ -9,13 +9,5 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
     `gatsby-theme-material-ui`,
-    // {
-    //   resolve: `gatsby-plugin-react-svg`,
-    //   options: {
-    //     rule: {
-    //       include: /assets/
-    //     }
-    //   }
-    // },
   ],
-}
+};
