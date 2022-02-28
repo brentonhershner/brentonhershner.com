@@ -114,6 +114,10 @@ const WordleHelper = () => {
         <meta name="email" content="brenthershner@gmail.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta name="revised" content="BrentonHershner, 2/27/2022" />
+        <meta
+          http-equiv="Refresh"
+          content="0; url='https://www.wordlehelper.dev'"
+        />
         <title>WordleHelper</title>
       </Helmet>
       <header className="App-header">
