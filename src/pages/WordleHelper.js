@@ -57,6 +57,7 @@ const WordleHelper = () => {
     setMisplaced(e.target.value.toUpperCase());
   };
 
+  // TODO: replace these predicate filter functions with a class for better testing
   const filterLocated = (word) => {
     return located.every((letter, index) => {
       return letter === "" || letter === word[index];
@@ -110,15 +111,18 @@ const WordleHelper = () => {
           content="Wordle, Helper, Wordle Helper, Wordle Help, Wordle Cheat, Wordle Tips"
         />
         <meta name="author" content="Brenton Hershner" />
+        <meta name="email" content="brenthershner@gmail.com" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="revised" content="BrentonHershner, 7/11/2021" />
+        <meta name="revised" content="BrentonHershner, 2/27/2022" />
         <title>WordleHelper</title>
       </Helmet>
       <header className="App-header">
         <h1>Wordle Helper</h1>
-
-        <h2 className="label">Correct Letters</h2>
+        <h3>
+          made by <a href="https://brentonhershner.com">Brenton Hershner</a>
+        </h3>
         <form className="inputs">
+          <h2 className="label">Correct Letters</h2>
           {located.map((value, position) => {
             return (
               <input
