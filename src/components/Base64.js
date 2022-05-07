@@ -12,7 +12,6 @@ const Base64 = () => {
       setEncoded(encodedUpdate);
     } catch (err) {
       console.log("Couldn't encode");
-      console.log(err);
     }
   };
 
@@ -24,7 +23,6 @@ const Base64 = () => {
       setDecoded(decodedUpdate);
     } catch (err) {
       console.log("Counldn't decode");
-      console.log(err);
     }
   };
 
