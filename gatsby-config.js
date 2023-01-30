@@ -8,6 +8,6 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-emotion`,
-    `gatsby-theme-material-ui`,
+    // `gatsby-theme-material-ui`,
   ],
 };

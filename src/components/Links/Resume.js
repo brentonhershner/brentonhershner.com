@@ -1,6 +1,6 @@
-import React from 'react';
-import { Tooltip, IconButton } from '@material-ui/core';
-import InsertDriveFileIcon from '@material-ui/icons/InsertDriveFile';
+import React from "react";
+import { Tooltip, IconButton } from "@mui/material";
+import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 // import pdf from '../../../static/BrentonHershnerResume.pdf';
 
 const Resume = () => {
@@ -16,7 +16,7 @@ const Resume = () => {
         <InsertDriveFileIcon />
       </IconButton>
     </Tooltip>
-  )
-}
+  );
+};
 
 export default Resume;
