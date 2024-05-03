@@ -8,7 +8,7 @@ export default function Instagram() {
       <IconButton
         target="_blank"
         rel="noopener"
-        href="https://www.instagram.com/brenthersh/"
+        href="https://www.instagram.com/brentonhershner/"
         aria-label="Link to instagram of Brenton Hershner"
       >
         <InstagramIcon />
