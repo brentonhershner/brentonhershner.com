@@ -1,10 +1,9 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
 
-const AboutMe = () => {
+const AboutMe: React.FC = () => {
   return (
-    <Box className="aboutMeText">
-      <Typography color="textPrimary">
+    <div className="aboutMeText">
+      <p className="text-foreground">
         Hi, my name is Brenton Hershner and I'm a Software Engineer. I started
         my career as a Mechanical Engineer and was promoted to Product Manager.
         Despite my success, I always had a passion for code. I would often write
@@ -15,11 +14,11 @@ const AboutMe = () => {
         else and was one of the last to sign off every night. On completing the
         program, I did so well that I was asked to stay and teach the next round
         of students while I job search. Rebuilding my career on a foundation of
-        code really excites me! I’ve never felt better about the path in front
+        code really excites me! I've never felt better about the path in front
         of me and look forward to what the future holds.
-      </Typography>
-    </Box>
+      </p>
+    </div>
   );
 };
 
-export default AboutMe;
+export default AboutMe; 

@@ -1,28 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, ChangeEvent } from "react";
 
-const Base64 = () => {
-  const [decoded, setDecoded] = useState("");
-  const [encoded, setEncoded] = useState("");
+const Base64: React.FC = () => {
+  const [decoded, setDecoded] = useState<string>("");
+  const [encoded, setEncoded] = useState<string>("");
 
-  const onChangeDecoded = (e) => {
+  const onChangeDecoded = (e: ChangeEvent<HTMLInputElement>) => {
     const v = e.target.value;
     setDecoded(v);
     try {
       const encodedUpdate = btoa(v);
       setEncoded(encodedUpdate);
-    } catch (err) {
+    } catch {
       console.log("Couldn't encode");
     }
   };
 
-  const onChangeEncoded = (e) => {
+  const onChangeEncoded = (e: ChangeEvent<HTMLInputElement>) => {
     const v = e.target.value;
     setEncoded(v);
     try {
       const decodedUpdate = atob(v);
       setDecoded(decodedUpdate);
-    } catch (err) {
-      console.log("Counldn't decode");
+    } catch {
+      console.log("Couldn't decode");
     }
   };
 
@@ -41,4 +41,4 @@ const Base64 = () => {
   );
 };
 
-export default Base64;
+export default Base64; 

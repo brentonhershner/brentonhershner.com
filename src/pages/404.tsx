@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default function FourOhNo() {
+const FourOhNo: React.FC = () => {
   return (
     <div>
       Oops. No page at this url.
     </div>
   );
 };
+
+export default FourOhNo; 

@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+:root {
+  --color-background: 0 0% 100%;
+  --color-foreground: 0 0% 9%;
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 0 0% 9%;
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 0 0% 9%;
+  --color-primary: 0 0% 9%;
+  --color-primary-foreground: 0 0% 98%;
+  --color-secondary: 0 0% 96%;
+  --color-secondary-foreground: 0 0% 9%;
+  --color-muted: 0 0% 96%;
+  --color-muted-foreground: 0 0% 45%;
+  --color-accent: 0 0% 96%;
+  --color-accent-foreground: 0 0% 9%;
+  --color-destructive: 0 0% 84%;
+  --color-destructive-foreground: 0 0% 98%;
+  --color-border: 0 0% 90%;
+  --color-input: 0 0% 90%;
+  --color-ring: 0 0% 9%;
+  --radius: 0.5rem;
+}
+
+.dark {
+  --color-background: 0 0% 9%;
+  --color-foreground: 0 0% 98%;
+  --color-card: 0 0% 9%;
+  --color-card-foreground: 0 0% 98%;
+  --color-popover: 0 0% 9%;
+  --color-popover-foreground: 0 0% 98%;
+  --color-primary: 0 0% 98%;
+  --color-primary-foreground: 0 0% 9%;
+  --color-secondary: 0 0% 15%;
+  --color-secondary-foreground: 0 0% 98%;
+  --color-muted: 0 0% 15%;
+  --color-muted-foreground: 0 0% 65%;
+  --color-accent: 0 0% 15%;
+  --color-accent-foreground: 0 0% 98%;
+  --color-destructive: 0 0% 30%;
+  --color-destructive-foreground: 0 0% 98%;
+  --color-border: 0 0% 15%;
+  --color-input: 0 0% 15%;
+  --color-ring: 0 0% 83%;
+}
+
+* {
+  border-color: hsl(var(--color-border));
+}
+
+body {
+  background-color: hsl(var(--color-background));
+  color: hsl(var(--color-foreground));
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+a {
+  font-weight: 500;
+  color: hsl(var(--color-primary));
+  text-decoration: inherit;
+}
+a:hover {
+  color: hsl(var(--color-primary) / 0.8);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: hsl(var(--color-primary));
+  color: hsl(var(--color-primary-foreground));
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: hsl(var(--color-ring));
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
