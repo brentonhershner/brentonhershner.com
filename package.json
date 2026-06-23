@@ -12,7 +12,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@netlify/vite-plugin": "^2.3.7",
+    "@netlify/vite-plugin": "^2.12.6",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/react-tooltip": "^1.2.7",
     "@tailwindcss/cli": "^4.1.11",
