@@ -9,7 +9,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "jest --passWithNoTests --roots src"
   },
   "dependencies": {
     "@netlify/vite-plugin": "^3.0.1",
